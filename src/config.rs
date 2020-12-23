@@ -16,9 +16,16 @@ impl ::std::default::Default for Config {
     } }
 }
 
+/// Loads elastic config from path
+/// 
+/// A new configuration file is created if none already exists
+/// 
+/// ```rust, no_run
+/// let config = config::read_config("path-to.yaml")
+/// let elastic_url = config.elastic.url
+/// ```
 pub fn read_config(path: &std::path::PathBuf) -> Config {
     let config_path = path.to_path_buf().into_os_string().into_string().unwrap();
-    println!("{}", config_path);
 
     let cfg: Config = confy::load_path(&config_path).expect("No config found");
 
