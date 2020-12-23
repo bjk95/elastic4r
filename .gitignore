@@ -1,1 +1,3 @@
 /target
+/config/example-conf-brad.yaml
+Cargo.lock
