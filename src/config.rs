@@ -7,7 +7,7 @@ pub struct Config {
     password: Option<String>
 }
 
-/// `MyConfig` implements `Default`
+/// `Config` implements `Default`
 impl ::std::default::Default for Config {
     fn default() -> Self { Self { 
         elastic_url: "empty".into(),
